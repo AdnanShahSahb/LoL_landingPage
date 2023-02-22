@@ -5,13 +5,22 @@ const WhyBuyCard = () => {
     return (
         <Card sx={{
             display: { xs: 'block', sm: 'flex' },
-            border:'solid brown',
+            // border:'solid yellow',
+            width:'100%'
+
 
 
         }}>
             <CardMedia
                 component="img"
-                sx={{ width: { xs: '100%', sm: '50%' }, }}
+                sx={{
+                    width: { xs: '100%', sm: '50%' },
+                    boxShadow: '0 0 80px 80px black inset',
+                    // border:'solid brown',
+                    boxShadow: '0 0 80px 80px black inset',
+
+
+                }}
                 image={`${morde}`}
                 alt="Live from space album cover"
             />

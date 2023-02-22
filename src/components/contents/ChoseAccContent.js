@@ -11,7 +11,7 @@ const ChoseAccContent = () => {
 
                 {/* <Typography sx={{ fontSize: '20px'}}><span style={{ color: '#19ebe0', }}>Choose Your </span>Account</Typography> */}
 
-                {/* <Carouseling /> */}
+                <Carouseling />
         </>
 
     )

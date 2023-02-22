@@ -60,8 +60,6 @@ function App() {
 
       <Navbar />
 
-
-
       <div style={{ background: 'blue', height: '50px' }}></div> {/* because of the fixed position of navbar not taking height 50px */}
 
       <Hero gifs={illoi} heighting={true}>
@@ -72,8 +70,6 @@ function App() {
         </ContentLayout>
       </Hero>
 
-
-
       <PageBreaker />
 
       {
@@ -81,9 +77,9 @@ function App() {
           console.log(k);
           return (
             <>
-              <Hero gifs={d} >
+              <Hero gifs={k == 1 && mordekaiser} >
                 <ContentLayout >
-                  {k !== 2 ?
+                  {k !== 3 ?
                     <TypographyHeading>
                       <span style={{ color: '#19ebe0', }}>{contentsInBlue[k]} </span>{contentsInWhite[k]}
                     </TypographyHeading>

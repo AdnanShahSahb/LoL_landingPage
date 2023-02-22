@@ -3,9 +3,9 @@ import { Box, Typography } from "@mui/material"
 const ContentLayout = (props) => {
     return (
         <Box sx={{
-            border: 'solid brown ',
+            // border: 'solid brown ',
             color: '#fff',
-            width: '90%',
+            width: '100%',
             textAlign: 'center',
 
             // verticalAlign: 'center',

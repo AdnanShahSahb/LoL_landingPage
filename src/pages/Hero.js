@@ -21,7 +21,7 @@ const Hero = (props) => {
             backgroundBlendMode: 'lighten',
             // boxShadow: 'inset 0px 70px 8px -10px #000,inset 0px -70px 8px -10px #000; ',
             // boxShadow: '-8px 80px 80px 8px black inset',
-            // boxShadow: '0 0 80px 80px black inset',
+            boxShadow: '0 0 80px 80px black inset',
 
             backgroundColor: '#000',
             // backgroundColor: '#242625',
