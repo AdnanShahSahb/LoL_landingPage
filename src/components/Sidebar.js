@@ -10,7 +10,7 @@ const Sidebar = (props) => {
             // display: { xs: 'block', sm: 'none' },
             // display: { sm: 'none' },
             backgroundColor: 'red',
-            position: 'absolute',
+            position: 'fixed',
             height: '100vh',
             width: '75vw',
             right: props.sidebarO ? '0vw' : '-100vw',
