@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material"
-import SubscribeNowText from "../SubscribeNowText"
+import SubscribeNowText from "../content/SubscribeNow"
 
-const SubscribeNowContent = () => {
+const SubscribeNowPage = () => {
     return (
         <>
 
@@ -9,4 +9,4 @@ const SubscribeNowContent = () => {
         </>
     )
 }
-export default SubscribeNowContent;
+export default SubscribeNowPage;

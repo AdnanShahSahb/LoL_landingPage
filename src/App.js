@@ -1,28 +1,28 @@
 
-import Hero from "./pages/Hero";
-import asdf from "./gifs/landingPage2W.jpg"
+import LandingPageCard from "./components/LandingPageCard";
+// import asdf from "./gifs/landingPage2W.jpg"
 import Navbar from "./components/Navbar";
 import { CssBaseline, Typography } from "@mui/material";
 import illoi from "./gifs/illoi.gif"
 import thresh from "./gifs/thresh.gif"
 import pykeG from "./gifs/pykeG.gif"
 import mordekaiser from "./gifs/mordekaiser.gif"
-import LoLN from "./gifs/LoLN.gif"
+// import LoLN from "./gifs/LoLN.gif"
 import jhin from "./gifs/jhin.gif"
 import ContentLayout from "./components/ContentLayout";
 
-import HeroContent from "./components/contents/HeroContent"
-import ChoseAccContent from "./components/contents/ChoseAccContent"
-import WhyBuyContent from "./components/contents/WhyBuyContent"
-import AboutUsContent from "./components/contents/AboutUsContent"
-import SubscribeNowContent from "./components/contents/SubscribeNowContent"
-import WhyBuyUsContent from "./components/WhyBuyUsContent"
+import HeroPage from "./pages/HeroPage"
+import ChoseAccPage from "./pages/ChoseAccPage"
+import WhyBuyPage from "./pages/WhyBuyPage"
+import AboutUsPage from "./pages/AboutUsPage"
+import SubscribeNowPage from "./pages/SubscribeNowPage"
+import WhyBuyUsPage from "./pages/WhyBuyUsPage"
 
 import styled from "@emotion/styled";
 import "./glitching.css"
 import Footer from "./components/Footer";
 
-import PageBreaker from "./PageBreaker"
+import PageBreaker from "./components/PageBreaker"
 
 function App() {
   const styling = {
@@ -48,11 +48,11 @@ function App() {
   })
 
   const comps = [
-    <ChoseAccContent />,
-    <WhyBuyUsContent />,
-    <WhyBuyContent />,
-    <AboutUsContent />,
-    <SubscribeNowContent />,]
+    <ChoseAccPage />,
+    <WhyBuyUsPage />,
+    <WhyBuyPage />,
+    <AboutUsPage />,
+    <SubscribeNowPage />,]
 
   return (
     <div style={styling}>
@@ -62,13 +62,13 @@ function App() {
 
       <div style={{ background: 'blue', height: '50px' }}></div> {/* because of the fixed position of navbar not taking height 50px */}
 
-      <Hero gifs={illoi} heighting={true}>
+      <LandingPageCard gifs={illoi} heighting={true}>
         <ContentLayout>
           <Typography sx={{ fontSize: '20px' }}><span style={{ color: '#19ebe0', }}>Buy </span>A Leage of</Typography>
           <Typography sx={{ color: '#19ebe0', fontSize: '20px' }}>Legends Account</Typography>
-          <HeroContent />
+          <HeroPage />
         </ContentLayout>
-      </Hero>
+      </LandingPageCard>
 
       <PageBreaker />
 
@@ -77,7 +77,7 @@ function App() {
           console.log(k);
           return (
             <>
-              <Hero gifs={k == 1 && mordekaiser} >
+              <LandingPageCard gifs={k == 1 && mordekaiser} >
                 <ContentLayout >
                   {k !== 3 ?
                     <TypographyHeading>
@@ -89,7 +89,7 @@ function App() {
                   }
                   {comps[k]}
                 </ContentLayout>
-              </Hero>
+              </LandingPageCard>
             </>
           )
         })

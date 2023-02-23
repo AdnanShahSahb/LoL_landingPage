@@ -1,7 +1,7 @@
 import { Box, Card } from "@mui/material"
-import WhyBuyUsCard from "./whyBuyUsCard/WhyBuyUsCard"
+import WhyBuyUsCard from "../content/WhyBuyUs"
 
-const WhyBuyUsContent = () => {
+const WhyBuyUsPage = () => {
     return (
         <>
 
@@ -9,9 +9,13 @@ const WhyBuyUsContent = () => {
             <br />
             <br />
             <Box sx={{
-                display: 'flex',
+                // display: 'flex',
+                display:{xs:'block',sm:'flex'},
                 width:'80%',
-                margin:'auto'
+                margin:'auto',
+                
+                // border:'solid brown'
+
             }}>
                 <WhyBuyUsCard />
                 <WhyBuyUsCard />
@@ -21,4 +25,4 @@ const WhyBuyUsContent = () => {
         </>
     )
 }
-export default WhyBuyUsContent
+export default WhyBuyUsPage

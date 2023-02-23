@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
-const HeroContent = () => {
+const HeroPage = () => {
 
     return (
         <>
@@ -20,12 +20,12 @@ const HeroContent = () => {
 
     )
 }
-export default HeroContent;
+export default HeroPage;
 // import styled from "@emotion/styled";
 // import { Button, Typography } from "@mui/material";
 // import { Box } from "@mui/system";
 
-// const HeroContent = () => {
+// const HeroPage = () => {
 
 //     return (
 //         <>
@@ -54,4 +54,4 @@ export default HeroContent;
 
 //     )
 // }
-// export default HeroContent;
+// export default HeroPage;

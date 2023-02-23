@@ -1,9 +1,9 @@
 import { Box } from "@mui/system";
-import HeroContent from "../components/contents/HeroContent";
-import asdf from "../gifs/illoi.gif"
+import HeroContent from "../pages/HeroPage";
+// import asdf from "./gifs/illoi.gif"
 import VideoHero from "../videos/VideoHero";
 
-const Hero = (props) => {
+const LandingPageCard = (props) => {
 
     return (
         <Box sx={{
@@ -40,4 +40,4 @@ const Hero = (props) => {
         </Box >
     )
 }
-export default Hero;
+export default LandingPageCard;

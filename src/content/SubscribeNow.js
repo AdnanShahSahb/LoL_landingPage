@@ -1,6 +1,6 @@
 import { Box, Button, FormControl, IconButton, Input, InputAdornment, InputLabel, OutlinedInput, Typography } from "@mui/material"
 
-const SubscribeNowText = () => {
+const SubscribeNow = () => {
     return (
 
         <Box sx={{
@@ -44,4 +44,4 @@ const SubscribeNowText = () => {
     )
 
 }
-export default SubscribeNowText
+export default SubscribeNow

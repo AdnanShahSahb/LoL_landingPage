@@ -1,5 +1,5 @@
 
-import ChoseYourCard from "../components/ChoseYourCard";
+import ChoseYourCard from "./ChoseYourAcc";
 import zed from "../gifs/zedWppr.png"
 
 const Carouseling = (props) => {

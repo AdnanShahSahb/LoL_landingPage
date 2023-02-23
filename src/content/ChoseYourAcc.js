@@ -1,6 +1,6 @@
 import { Button, ButtonGroup, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 import zed from "../gifs/zedWppr.png"
-const ChoseYourCard = () => {
+const ChoseYourAcc = () => {
     return (
         <Card sx={{ width: 345, border:'solid brown', margin:'10px'}}>
             <CardActionArea>
@@ -32,4 +32,4 @@ const ChoseYourCard = () => {
         </Card>
     )
 }
-export default ChoseYourCard;
+export default ChoseYourAcc;

@@ -1,18 +1,20 @@
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material"
-import zed from "../../gifs/zedWppr.png"
-const WhyBuyUsCard = () => {
+import zed from "../gifs/zedWppr.png"
+const WhyBuyUs = () => {
     return (
         <Card sx={{
             maxWidth: 345,
             // border: 'solid blue',
+            margin:'auto',
             borderRadius: '0px',
             background:'transparent',
+            // border:'solid brown'
 
 
         }}>
 
             <CardActionArea sx={{
-                textAlign: 'center'
+                textAlign: 'center',
             }}>
                 <CardMedia
                     component="img"
@@ -49,4 +51,4 @@ const WhyBuyUsCard = () => {
         </Card >
     )
 }
-export default WhyBuyUsCard
+export default WhyBuyUs

@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material"
-import WhyBuyCard from "../WhyBuyCard"
+import WhyBuyCard from "../content/WhyBuy"
 
-const WhyBuyContent = () => {
+const WhyBuyPage = () => {
 
     return (
 
@@ -12,4 +12,4 @@ const WhyBuyContent = () => {
         </>
     )
 }
-export default WhyBuyContent
+export default WhyBuyPage

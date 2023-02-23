@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import AboutUsCard from "../AboutUsCard";
+import AboutUsCard from "../content/AboutUs";
 
-const AboutUsContent = () => {
+const AboutUsPage = () => {
     return (
 
         <>
@@ -11,4 +11,4 @@ const AboutUsContent = () => {
 
     )
 }
-export default AboutUsContent;
+export default AboutUsPage;

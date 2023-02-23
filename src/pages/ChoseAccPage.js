@@ -1,9 +1,9 @@
 
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Carouseling from "../Carouseling";
+import Carouseling from "../content/Carouseling";
 
-const ChoseAccContent = () => {
+const ChoseAccPage = () => {
 
     return (
         <>
@@ -16,13 +16,13 @@ const ChoseAccContent = () => {
 
     )
 }
-export default ChoseAccContent;
+export default ChoseAccPage;
 
 // import { Button, Typography } from "@mui/material";
 // import { Box } from "@mui/system";
 // import Carouseling from "./Carouseling";
 
-// const ChoseAccContent = () => {
+// const ChoseAccPage = () => {
 
 //     return (
 //         <>
@@ -45,4 +45,4 @@ export default ChoseAccContent;
 
 //     )
 // }
-// export default ChoseAccContent;
+// export default ChoseAccPage;
