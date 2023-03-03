@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/LoL_landingPage/static/css/main.51e4ee92.css",
-    "main.js": "/LoL_landingPage/static/js/main.7bfd6172.js",
+    "main.css": "/LoL_landingPage/static/css/main.f419d6ef.css",
+    "main.js": "/LoL_landingPage/static/js/main.f6520f24.js",
     "static/media/illoi.gif": "/LoL_landingPage/static/media/illoi.5680e8889eeb190f8dcb.gif",
     "static/media/jhin.gif": "/LoL_landingPage/static/media/jhin.25959f30e8e92b358133.gif",
     "static/media/thresh.gif": "/LoL_landingPage/static/media/thresh.ed20da1e92193ac592c1.gif",
     "static/media/mordekaiser.gif": "/LoL_landingPage/static/media/mordekaiser.d24540c50175658566e6.gif",
     "static/media/zedWppr.png": "/LoL_landingPage/static/media/zedWppr.0846ab06b9ff9122239b.png",
+    "static/media/Yassuo.png": "/LoL_landingPage/static/media/Yassuo.52ed7ed78958637857b9.png",
+    "static/media/ash.jpg": "/LoL_landingPage/static/media/ash.ef169cc0f77073d6d0a5.jpg",
     "static/media/pykeG.gif": "/LoL_landingPage/static/media/pykeG.c854d00ed59adf915e51.gif",
+    "static/media/LoL_icon.svg": "/LoL_landingPage/static/media/LoL_icon.8a61f326bc96474d342570d70cb7584a.svg",
     "index.html": "/LoL_landingPage/index.html",
-    "main.51e4ee92.css.map": "/LoL_landingPage/static/css/main.51e4ee92.css.map",
-    "main.7bfd6172.js.map": "/LoL_landingPage/static/js/main.7bfd6172.js.map"
+    "main.f419d6ef.css.map": "/LoL_landingPage/static/css/main.f419d6ef.css.map",
+    "main.f6520f24.js.map": "/LoL_landingPage/static/js/main.f6520f24.js.map"
   },
   "entrypoints": [
-    "static/css/main.51e4ee92.css",
-    "static/js/main.7bfd6172.js"
+    "static/css/main.f419d6ef.css",
+    "static/js/main.f6520f24.js"
   ]
 }
