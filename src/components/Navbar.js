@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Sidebar from "./Sidebar";
 import { useState } from 'react';
 import styled from '@emotion/styled';
+import LoL_icon from "../gifs/LoL_icon.svg"
 
 // navbar
 // sidebar
@@ -20,12 +21,13 @@ const BoxContainer = styled(Box)({
     alignItems: 'center',
     backgroundColor: '#242625',
     height: '50px',
+    innerWidth: '100vw',
     color: '#19ebe0',
     padding: '10px',
     position: 'fixed',
     left: '0',
     right: '0',
-    zIndex: '1'
+    zIndex: '30'
 })
 
 const StyledTypography = styled(Typography)({
@@ -58,7 +60,7 @@ const Navbar = () => {
 
                 {/* logo */}
                 <Typography>
-                    LOGO
+                    <img src={LoL_icon} height='30px' />
                 </Typography>
 
                 {/* pages */}

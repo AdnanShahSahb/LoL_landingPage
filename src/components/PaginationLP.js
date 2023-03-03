@@ -58,12 +58,12 @@ const PaginationLP = (props) => {
                 props.setCurrentPage(d)
             }}>{d}</a></li> */}
 
-            <br />
-            <ol style={{}} className="carousel-indicators position-relative">
+            {/* <br /> */}
+            <ol style={{ width: {xs:'100%',md:'180px'},  marginLeft: '0px', marginTop: {xs:'60px',sm:'10px'} }} className="carousel-indicators position-relative">
                 {
                     pageNumbers.map((d, key) => {
                         if (d < props.maxPaginLimit + 1 && d > props.minPaginLimit) {
-                            return <li style={{ marginTop: 'auto', marginBottom: 'auto', width: '5px', height: '5px', borderRadius: '100px' }} onClick={() => {
+                            return <li style={{ marginTop: 'auto', marginBottom: 'auto', width: '7px', height: '7px', borderRadius: '100px', }} onClick={() => {
                                 props.setCurrentPage(d)
                             }} key={key} className={` ${props.currentPage == d ? 'active' : ''}`}></li>
                         }
@@ -72,13 +72,15 @@ const PaginationLP = (props) => {
                     })
                 }
 
-                <div style={{ marginLeft: '40px' }}>
+                <div style={{
+                    marginLeft: '40px',
+                }}>
 
-                    <NavigateBeforeIcon style={{ border: 'solid ', borderRadius: '100px', marginRight: '10px' }} onClick={prevPage} />
+                    <NavigateBeforeIcon className='hoverBtn' style={{ border: 'solid 1.5px', height: '34px', width: '34px', borderRadius: '100px', marginRight: '10px', }}  onClick={prevPage} />
                     {/* {prevPgNo} */}
 
                     {/* {nextPgNo} */}
-                    <NavigateNextIcon style={{ border: 'solid', borderRadius: '100px' }} onClick={nextPage} />
+                    <NavigateNextIcon className='hoverBtn' style={{ border: 'solid 1.5px', height: '34px', width: '34px', borderRadius: '100px', }} onClick={nextPage} />
                 </div>
 
             </ol>

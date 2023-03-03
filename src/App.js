@@ -22,13 +22,27 @@ import styled from "@emotion/styled";
 import "./glitching.css"
 import Footer from "./components/Footer";
 
-import PageBreaker from "./components/PageBreaker"
+import AddingShadow from "./components/AddingShadow";
+
+
+
+export const TypographyHeading = styled(Typography)({
+  fontSize: '32px',
+  padding: '65px',
+  // border: 'solid brown',
+  fontWeight: 'bold',
+  zIndex: '3',
+  // border:'solid white',
+})
 
 function App() {
+
+
   const styling = {
     // backgroundImage: `url(${asdf})`,
     // backgroundSize: "cover",
     height: '2000px',
+    width: '100vw',
 
   }
 
@@ -38,21 +52,28 @@ function App() {
   // const contentsInWhite = ['Account', ' Buy From Us', 'About Us', 'Now']
 
   // const gifs = [`${jhin}`]
-  const gifs = [`${jhin}`, `${mordekaiser}`, `${pykeG}`, `${thresh}`]
 
-  const TypographyHeading = styled(Typography)({
-    fontSize: '22px',
-    padding: '15px',
 
-    // border:'solid white',
-  })
 
   const comps = [
-    <ChoseAccPage />,
-    <WhyBuyUsPage />,
-    <WhyBuyPage />,
-    <AboutUsPage />,
-    <SubscribeNowPage />,]
+    <HeroPage p1={contentsInBlue[0]} p2={contentsInWhite[0]} />,
+    <ChoseAccPage p1={contentsInBlue[0]} p2={contentsInWhite[0]} />,
+    <WhyBuyUsPage p1={contentsInBlue[1]} p2={contentsInWhite[1]} />,
+    <WhyBuyPage p1={contentsInBlue[2]} p2={contentsInWhite[2]} />,
+    <AboutUsPage p1={contentsInBlue[3]} p2={contentsInWhite[3]} />,
+    <SubscribeNowPage p1={contentsInBlue[4]} p2={contentsInWhite[4]} />,]
+
+  const gifs = [`${thresh}`, '', `${mordekaiser}`, '', '', `${jhin}`]
+  const heighting = [100, , 100, , , 140]
+  const marginBotting = [, , , , , 200]
+  const boxShadowing = [
+    ' 4px 2px -2px gray',
+    ,
+    '0 0 80px 80px black inset',
+    ,
+    ,
+    '-8px 80px 80px 8px black inset'
+  ]
 
   return (
     <div style={styling}>
@@ -60,35 +81,18 @@ function App() {
 
       <Navbar />
 
-      <div style={{ background: 'blue', height: '50px' }}></div> {/* because of the fixed position of navbar not taking height 50px */}
+      <div style={{ background: 'blue', height: '50px' }}></div>   {/* because of the fixed position of navbar not taking height 50px */}
 
-      <LandingPageCard gifs={illoi} heighting={true}>
-        <ContentLayout>
-          <Typography sx={{ fontSize: '20px' }}><span style={{ color: '#19ebe0', }}>Buy </span>A Leage of</Typography>
-          <Typography sx={{ color: '#19ebe0', fontSize: '20px' }}>Legends Account</Typography>
-          <HeroPage />
-        </ContentLayout>
-      </LandingPageCard>
 
-      <PageBreaker />
+      {/* <AddingShadow /> */}
 
       {
         comps.map((d, k) => {
-          console.log(k);
+          // console.log(k);
           return (
             <>
-              <LandingPageCard gifs={k == 1 && mordekaiser} >
-                <ContentLayout >
-                  {k !== 3 ?
-                    <TypographyHeading>
-                      <span style={{ color: '#19ebe0', }}>{contentsInBlue[k]} </span>{contentsInWhite[k]}
-                    </TypographyHeading>
-                    :
-                    <TypographyHeading>
-                    </TypographyHeading>
-                  }
-                  {comps[k]}
-                </ContentLayout>
+              <LandingPageCard nth={k} gifs={gifs[k]} heighting={heighting[k]} marginBotting={marginBotting[k]} boxShadowing={boxShadowing[k]} >  {/* nth==0 for Hero Page for height 100vh*/}
+                {comps[k]}
               </LandingPageCard>
             </>
           )

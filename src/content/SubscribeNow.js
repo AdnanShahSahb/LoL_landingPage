@@ -1,44 +1,50 @@
-import { Box, Button, FormControl, IconButton, Input, InputAdornment, InputLabel, OutlinedInput, Typography } from "@mui/material"
+import { Box, Button, FormControl, IconButton, Input, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from "@mui/material"
+import './subscribeNow.css'
 
 const SubscribeNow = () => {
     return (
 
         <Box sx={{
-            // border: 'solid',
+            // border: 'solid yellow',
             color: '#fff',
-            width: '50vw',
+            width: {xs:'90vw',sm:'40vw'},
             textAlign: 'center',
             ml: 'auto',
             mr: 'auto',
+            mb: '150px',
+            // opacity:'1'
         }}>
 
-            <Typography sx={{ color: '#fff', fontSize: '10px' }}>A paragraph is a series of related sentences developing a central idea, called the topic. Try to think about paragraphs in terms of thematic unity</Typography>
-            <Typography sx={{ fontSize: '10px' }}><span style={{ color: '#19ebe0', }}>Subscribe To Our New Letter And </span>Be The First To Know</Typography>
+            <Typography sx={{ padding: '10px', color: '#fff', fontSize: '12px', textAlign: ' center', margin: '10px auto ', }}>
+                A paragraph is a series of related sentences developing a central idea, called the topic.
+                <br />
+                Try to think about paragraphs in terms of thematic unity
+            </Typography>
+            <Typography sx={{ fontSize: '15px', color: '#19ebe0', textTransform: 'uppercase', fontFamily: 'monospace' }}>
+                Subscribe To Our New Letter And Be The First To Know
+            </Typography>
 
             <Box sx={{
-                display: 'flex', width: '400px', m: 'auto',
+                display: 'flex',
+                m: '50px auto ',
+                // border: 'solid brown',
+                // background: 'transparent',
+                // padding: '40px',
                 // boxShadow: ' 0 1px 4px #fff, 0 0 40px rgba(0, 0, 0, 0.1) inset',
                 color: 'primary',
+                height: '40px'
+
             }}>
-                <FormControl sx={{ m: 1, width: '25ch', }} variant="outlined">
 
-                    <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                    <OutlinedInput
-                        id="outlined-adornment-password"
-                        endAdornment={
-                            <InputAdornment position="end">
-                                <IconButton
-                                    aria-label="toggle password visibility"
-                                    edge="end"
-                                >
-                                </IconButton>
-                            </InputAdornment>
-                        }
-                        label="Email"
-                    />
 
-                </FormControl>
-                <Button variant="contained" sx={{ m: 1 }}>Subscribe</Button>
+                {/* <TextField id="outlined-search" label="Search field" type="search" sx={{ background: 'transparent', width: '35vw' }} /> */}
+                <input type='text' style={{ width: '80%' }} />
+                <Button sx={{
+                    // mt: '25px',
+                    backgroundColor: '#AA336A',
+                    color: '#fff',
+                }}>Subscribe</Button>
+                {/* <Button variant="contained" sx={{ width: '15vw', }}>Subscribe</Button> */}
             </Box>
         </Box>
     )

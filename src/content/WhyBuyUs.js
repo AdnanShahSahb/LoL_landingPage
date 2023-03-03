@@ -1,6 +1,6 @@
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material"
 import zed from "../gifs/zedWppr.png"
-const WhyBuyUs = () => {
+const WhyBuyUs = (p) => {
     return (
         <Card sx={{
             maxWidth: 345,
@@ -19,7 +19,7 @@ const WhyBuyUs = () => {
                 <CardMedia
                     component="img"
                     height="140"
-                    image={zed}
+                    image={p.media}
                     alt="green iguana"
                     sx={{
                         //    border:'solid',
@@ -34,17 +34,17 @@ const WhyBuyUs = () => {
                 />
                 <CardContent sx={{
                     // border:'solid'
-                    backgroundColor: 'gray',
+                    // backgroundColor: 'gray',
 
-                    background: 'rgba(255, 255, 255, 0.5)',
+                    background: 'rgba(60, 60, 60, 0.5)',
                     WebkitBackdropFilter: 'blur(1px)',
                     backdropFilter: 'blur(1px)',
                     // border: '1px solid rgba(255,255,255,0.25)',
                 }}>
-                    <Typography variant="body2" color="text.secondary">
-                        <Typography variant="h5">asdf</Typography>
-                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                        species, ranging across all continents except Antarctica
+                    <Typography variant="body2" color="#fff" >
+                        <Typography color="rgb(25, 235, 224)" fontWeight='bold' marginBottom='10px'>{p.heading}</Typography>
+
+                        {p.body}
                     </Typography>
                 </CardContent>
             </CardActionArea>
