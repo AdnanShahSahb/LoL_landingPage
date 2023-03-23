@@ -1,7 +1,7 @@
 import { Box, Button, FormControl, IconButton, Input, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from "@mui/material"
 import './subscribeNow.css'
 
-const SubscribeNow = () => {
+const SubscribeNow = (props) => {
     return (
 
         <Box sx={{
@@ -15,10 +15,9 @@ const SubscribeNow = () => {
             // opacity:'1'
         }}>
 
-            <Typography sx={{ padding: '10px', color: '#fff', fontSize: '12px', textAlign: ' center', margin: '10px auto ', }}>
-                A paragraph is a series of related sentences developing a central idea, called the topic.
-                <br />
-                Try to think about paragraphs in terms of thematic unity
+            <Typography sx={{ padding: '10px', color: '#fff', fontSize: '12px', textAlign: ' center', margin: '10px auto ',
+         }}>
+                {props.subscribeNowContent}
             </Typography>
             <Typography sx={{ fontSize: '15px', color: '#19ebe0', textTransform: 'uppercase', fontFamily: 'monospace' }}>
                 Subscribe To Our New Letter And Be The First To Know

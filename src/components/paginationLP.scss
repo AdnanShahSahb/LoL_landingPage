@@ -77,9 +77,34 @@
     text-decoration: none;
 }
 
-.hoverBtn{
-    &:hover{
+.hoverBtn {
+    &:hover {
         cursor: pointer;
-        color: #19ebe0, 
+        color: #19ebe0,
     }
 }
+
+.carousel-indicators {}
+
+// Media query for screens smaller than 600px
+@media (max-width: 599px) {
+
+    // your styles here
+    .aboutUsIndic {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
+
+// Media query for screens larger than or equal to 600px
+@media (min-width: 600px) {
+    // your styles here
+
+    .aboutUsIndic {
+        width: 180px;
+        margin-top: 90px;
+        margin-left: 0;
+    }
+}
+

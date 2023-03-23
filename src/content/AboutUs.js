@@ -1,39 +1,17 @@
 import styled from "@emotion/styled"
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material"
 import { useEffect, useState } from "react"
-import morde from "../gifs/mordekaiser.gif"
 import PaginationLP from "../components/PaginationLP"
-import AddingShadow from "../components/AddingShadow"
 
-const AboutUs = () => {
+const AboutUs = (props) => {
 
-    const content = [
-        {
-            heading: 'Rick Gosling',
-            para: 'A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116).Length and appearance do not determine'
-        }, {
-            heading: 'Ryan Gosling',
-            para: 'A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116).Length and appearance do not determine'
-        }, {
-            heading: 'Shakuntla Gosling',
-            para: 'A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116).Length and appearance do not determine'
-        }, {
-            heading: 'Rick Dosling',
-            para: 'A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116).Length and appearance do not determine'
-        }, {
-            heading: 'Gick Rosling',
-            para: 'A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116).Length and appearance do not determine'
-        }, {
-            heading: 'Ramp Gosling',
-            para: 'A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116).Length and appearance do not determine'
-        },
-    ]
+
 
 
     // User is currently on this page
     const [currentPage, setCurrentPage] = useState(1);
     // No of Records to be displayed on each page   
-    const [recordsPerPage, setRecordsPerPage] = useState(3);
+    const [recordsPerPage, setRecordsPerPage] = useState(4);
 
     // no of list of pagination no.s
     const [maxPaginLimit, setMaxPaginLimit] = useState(10);
@@ -49,14 +27,14 @@ const AboutUs = () => {
     let currentRecords = 0;
     let nPages = 0;
 
-    currentRecords = content.slice(indexOfFirstRecord, indexOfLastRecord);
-    nPages = Math.ceil(content.length / recordsPerPage)
+    currentRecords = props.userContent.slice(indexOfFirstRecord, indexOfLastRecord);
+    nPages = Math.ceil(props.userContent.length / recordsPerPage)
 
     useEffect(() => {
         if (window.innerWidth < 600)
             setRecordsPerPage(1)
         else
-            setRecordsPerPage(3)
+            setRecordsPerPage(4)
     }, [window.innerWidth])
 
 
@@ -67,10 +45,10 @@ const AboutUs = () => {
         color: "#fff",
         component: "div",
         width: '100%',
-        fontSize: "10px",
-        margin: '30px 0',
+        fontSize: "12px",
+        margin: '10px 0',
         borderRadius: '10px',
-        // height: '90px',
+        // height: '107px',
         // border:'solid brown',
         backgroundColor: 'rgba(100, 100, 100, 0.5)',
 
@@ -85,6 +63,7 @@ const AboutUs = () => {
 
     }, [window.innerWidth])
 
+
     return (
         <Card sx={{
             display: { xs: 'block', sm: 'flex' },
@@ -96,7 +75,7 @@ const AboutUs = () => {
             color: '#fff',
             // borderRadius: '10px',
             textAlign: 'justify',
-            // border:'solid brown ',
+            // border: 'solid brown ',
             width: '80%',
             margin: 'auto',
             marginTop: '40px',
@@ -107,8 +86,9 @@ const AboutUs = () => {
 
             <Box width="100%" sx={{
                 zIndex: '4',
-                // border:'solid',
-                marginTop: '40px',
+                // border: 'solid',
+                // marginTop: '40px',
+                padding:'40px'
             }}>
 
                 <Typography sx={{
@@ -140,12 +120,20 @@ const AboutUs = () => {
                     </span>
                 </Typography>
 
-                <Typography width='100%' sx={{ paddingRight: { xs: '0px', sm: '50px' } }} >
-                    A paragraph is a self - contained unit of discourse in writing dealing with a particular point or idea.Though not required by the orthographic conventions of any language with a writing system, paragraphs are a conventional means of organizing extended segments of prose.
+                <Typography width='100%' sx={{
+                    paddingRight: { xs: '0px', sm: '50px' }, margin: ' 0',
+                    fontFamily: '"Roboto", "Helvetica", "Arial", sans - serif',
+                    fontWeight: '400',
+                    fontSize: '12px',
+                    lineHeight: '1.43',
+                    letterSpacing: '0.01071em',
+                    color: '#fff',
+                }} >
+                    {props.aboutContent}
                 </Typography >
 
-                {mblMode=="off" &&
-                    <PaginationLP setMaxPaginLimit={setMaxPaginLimit} setMinPaginLimit={setMinPaginLimit} maxPaginLimit={maxPaginLimit} minPaginLimit={minPaginLimit} nPages={nPages} currentPage={currentPage} setCurrentPage={setCurrentPage} totalT={content.length} />
+                {mblMode == "off" &&
+                    <PaginationLP setMaxPaginLimit={setMaxPaginLimit} setMinPaginLimit={setMinPaginLimit} maxPaginLimit={maxPaginLimit} minPaginLimit={minPaginLimit} nPages={nPages} currentPage={currentPage} setCurrentPage={setCurrentPage} totalT={props.userContent.length} />
                 }
 
             </Box >
@@ -153,7 +141,7 @@ const AboutUs = () => {
                 display: 'flex', flexDirection: 'column',
                 padding: '10px',
                 zIndex: '1',
-                // border:'solid'
+                // border: 'solid'
 
             }}>
 
@@ -166,7 +154,7 @@ const AboutUs = () => {
                     {currentRecords.map((d, k) => {
                         // console.log(d, k);
                         return (
-                            < TypographyLay >
+                            < TypographyLay key={k}>
                                 <Typography sx={{ textAlign: { xs: 'center', md: 'left' }, color: 'rgb(25, 235, 224)' }} component="div" variant="h5">
                                     {d.heading}
                                 </Typography>
@@ -176,8 +164,8 @@ const AboutUs = () => {
                     })}
 
                 </CardContent>
-                {mblMode=="on" &&
-                    <PaginationLP setMaxPaginLimit={setMaxPaginLimit} setMinPaginLimit={setMinPaginLimit} maxPaginLimit={maxPaginLimit} minPaginLimit={minPaginLimit} nPages={nPages} currentPage={currentPage} setCurrentPage={setCurrentPage} totalT={content.length} />
+                {mblMode == "on" &&
+                    <PaginationLP setMaxPaginLimit={setMaxPaginLimit} setMinPaginLimit={setMinPaginLimit} maxPaginLimit={maxPaginLimit} minPaginLimit={minPaginLimit} nPages={nPages} currentPage={currentPage} setCurrentPage={setCurrentPage} totalT={props.userContent.length} />
                 }
             </Box>
 

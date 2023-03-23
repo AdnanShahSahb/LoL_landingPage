@@ -59,7 +59,8 @@ const PaginationLP = (props) => {
             }}>{d}</a></li> */}
 
             {/* <br /> */}
-            <ol style={{ width: {xs:'100%',md:'180px'},  marginLeft: '0px', marginTop: {xs:'60px',sm:'10px'} }} className="carousel-indicators position-relative">
+            <ol className="carousel-indicators aboutUsIndic position-relative">
+            {/* <ol style={{ width: {xs:'100%',sm:'180px'}, marginLeft: '0px', marginTop: {xs:'60px',sm:'10px'} }} className="carousel-indicators position-relative"> */}
                 {
                     pageNumbers.map((d, key) => {
                         if (d < props.maxPaginLimit + 1 && d > props.minPaginLimit) {

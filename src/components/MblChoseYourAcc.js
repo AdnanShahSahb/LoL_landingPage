@@ -7,7 +7,7 @@ const MblChoseYourAcc = (props) => {
 
         props.deskContents.map((d, k) => {
             return (
-                <div id="swipingCard" className={`carousel-item ${k == 0 && 'active'}`}>
+                <div key={k} id="swipingCard" className={`carousel-item ${k == 0 && 'active'}`}>
                     <div className={`row d-flex justify-content-center `}>
                         <ChoseYourAcc data={props.deskContents[k]} />
                     </div>

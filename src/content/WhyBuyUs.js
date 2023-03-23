@@ -1,14 +1,11 @@
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material"
-import zed from "../gifs/zedWppr.png"
 const WhyBuyUs = (p) => {
     return (
         <Card sx={{
             maxWidth: 345,
-            // border: 'solid blue',
             margin:'auto',
             borderRadius: '0px',
             background:'transparent',
-            // border:'solid brown'
 
 
         }}>
@@ -28,18 +25,21 @@ const WhyBuyUs = (p) => {
                         // border: 'solid',
                         marginLeft: 'auto',
                         marginRight: 'auto',
-                        padding:'10px'
+                        padding:'10px',
                     }}
 
                 />
                 <CardContent sx={{
-                    // border:'solid'
+                    // border:'solid',
                     // backgroundColor: 'gray',
 
+                    height:{xs:'auto',sm:'35vh'},
                     background: 'rgba(60, 60, 60, 0.5)',
                     WebkitBackdropFilter: 'blur(1px)',
                     backdropFilter: 'blur(1px)',
                     // border: '1px solid rgba(255,255,255,0.25)',
+                    overflowY:'auto',
+                    
                 }}>
                     <Typography variant="body2" color="#fff" >
                         <Typography color="rgb(25, 235, 224)" fontWeight='bold' marginBottom='10px'>{p.heading}</Typography>
