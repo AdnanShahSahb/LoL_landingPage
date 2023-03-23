@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/LoL_landingPage/static/css/main.f419d6ef.css",
-    "main.js": "/LoL_landingPage/static/js/main.f6520f24.js",
-    "static/media/illoi.gif": "/LoL_landingPage/static/media/illoi.5680e8889eeb190f8dcb.gif",
+    "main.css": "/LoL_landingPage/static/css/main.04479e08.css",
+    "main.js": "/LoL_landingPage/static/js/main.aa830f01.js",
+    "static/media/wukong.jpg": "/LoL_landingPage/static/media/wukong.5963bc0201fc53833a92.jpg",
+    "static/media/leesin.png": "/LoL_landingPage/static/media/leesin.6750e6a6b82fd420d412.png",
     "static/media/jhin.gif": "/LoL_landingPage/static/media/jhin.25959f30e8e92b358133.gif",
+    "static/media/Fiora.png": "/LoL_landingPage/static/media/Fiora.aec0a6879fd5d0a785c8.png",
     "static/media/thresh.gif": "/LoL_landingPage/static/media/thresh.ed20da1e92193ac592c1.gif",
     "static/media/mordekaiser.gif": "/LoL_landingPage/static/media/mordekaiser.d24540c50175658566e6.gif",
+    "static/media/zed.png": "/LoL_landingPage/static/media/zed.0846ab06b9ff9122239b.png",
     "static/media/zedWppr.png": "/LoL_landingPage/static/media/zedWppr.0846ab06b9ff9122239b.png",
-    "static/media/Yassuo.png": "/LoL_landingPage/static/media/Yassuo.52ed7ed78958637857b9.png",
+    "static/media/yasuo.png": "/LoL_landingPage/static/media/yasuo.8cec290b52026b330dc6.png",
     "static/media/ash.jpg": "/LoL_landingPage/static/media/ash.ef169cc0f77073d6d0a5.jpg",
-    "static/media/pykeG.gif": "/LoL_landingPage/static/media/pykeG.c854d00ed59adf915e51.gif",
     "static/media/LoL_icon.svg": "/LoL_landingPage/static/media/LoL_icon.8a61f326bc96474d342570d70cb7584a.svg",
+    "static/media/ww.webp": "/LoL_landingPage/static/media/ww.e5005416387bb2667e9b.webp",
     "index.html": "/LoL_landingPage/index.html",
-    "main.f419d6ef.css.map": "/LoL_landingPage/static/css/main.f419d6ef.css.map",
-    "main.f6520f24.js.map": "/LoL_landingPage/static/js/main.f6520f24.js.map"
+    "main.04479e08.css.map": "/LoL_landingPage/static/css/main.04479e08.css.map",
+    "main.aa830f01.js.map": "/LoL_landingPage/static/js/main.aa830f01.js.map"
   },
   "entrypoints": [
-    "static/css/main.f419d6ef.css",
-    "static/js/main.f6520f24.js"
+    "static/css/main.04479e08.css",
+    "static/js/main.aa830f01.js"
   ]
 }
