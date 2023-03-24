@@ -5,11 +5,13 @@ import { Box } from "@mui/system";
 import gsap from "gsap";
 import { useEffect, useLayoutEffect, useRef } from "react";
 
+
 const HeroPage = (props) => {
     const HeroBox = styled(Box)({
         zIndex: '1',
-        width:'90vw',
-        margin:'auto'
+        width: '90vw',
+        margin: 'auto',
+        position:'relative'
     })
 
     const LoLUp = useRef()
@@ -36,9 +38,9 @@ const HeroPage = (props) => {
 
 
             <Typography ref={LoLUp} sx={{ fontSize: '25px', fontWeight: 'bold', }}><span style={{ color: '#19ebe0', }}>BUY </span>A LEAGUE OF</Typography>
-            <Typography ref={LoLDown} sx={{ color: '#fff', fontSize: '25px', fontFamily: 'Century Gothic', letterSpacing: {xs:'5px',sm:'10px'}, fontWeight: 'bolder', textShadow: '0 0 10px #19ebe0, 0 0 20px #19ebe0, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000' }}>
-                <span ref={capitalLetterL} style={{ fontSize: '50px',}}>L</span>EGENDS
-                <span ref={capitalLetterA} style={{ fontSize: '50px',marginLeft:'20px'  }}>A</span>CCOUNT
+            <Typography ref={LoLDown} sx={{ color: '#fff', fontSize: '25px', fontFamily: 'Century Gothic', letterSpacing: { xs: '5px', sm: '10px' }, fontWeight: 'bolder', textShadow: '0 0 10px #19ebe0, 0 0 20px #19ebe0, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000' }}>
+                <span ref={capitalLetterL} style={{ fontSize: '50px', }}>L</span>EGENDS
+                <span ref={capitalLetterA} style={{ fontSize: '50px', marginLeft: '20px' }}>A</span>CCOUNT
             </Typography>
             <div style={{ borderBottom: 'solid #fff', width: '30%', margin: '30px auto ' }}></div>
             <Button sx={{
@@ -48,6 +50,10 @@ const HeroPage = (props) => {
                 fontSize: '20px',
 
             }}>Order Now</Button>
+            {/* <div style={{ color: '#fff', marginTop: '25vh', position: 'absolute', zIndex: 100, opacity: '100px', '&:hover': { cursor: 'pointer' } }} > */}
+            
+
+
         </HeroBox>
 
     )

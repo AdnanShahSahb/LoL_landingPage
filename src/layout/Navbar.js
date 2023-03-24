@@ -6,7 +6,7 @@ import { Box } from '@mui/system';
 // import './App.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import Sidebar from "./Sidebar";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import LoL_icon from "../assets/icon/LoL_icon.svg"
 import { useLocation } from 'react-router-dom';
@@ -18,11 +18,8 @@ const Navbar = () => {
 
 
     const menuItemsArr = ["Home", "Accounts", "Why Us", "Why LoL", "About Us", "Subscribe"]
-    const href_for_navbar = ["", "#accounts", "#whyUs", "#whyLoL", "#aboutUs", "#subscribe"]
+    const href_for_navbar = ["#home", "#accounts", "#whyUs", "#whyLoL", "#aboutUs", "#subscribe"]
 
-    const currLoc = useLocation()
-
-    // console.log(currLoc.hash);
 
     const BoxContainer = styled(Box)({
         // border: 'solid',
@@ -52,6 +49,38 @@ const Navbar = () => {
         }
     })
 
+
+    const [activeLink, setActiveLink] = useState('home');
+
+    const handleScroll = () => {
+        // console.log(1);
+
+        const sections = document.querySelectorAll('#mainSection')
+
+        sections.forEach((eachSection) => {
+            const top = eachSection.offsetTop - 20;
+            const height = eachSection.clientHeight;
+            const bottom = top + height;
+
+            if (window.pageYOffset >= top && window.pageYOffset <= bottom) {
+
+                setActiveLink(eachSection.children[0].id);
+            }
+        })
+    }
+
+
+    useEffect(() => {
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+
+
+    }, [])
+
     return (
         <>
 
@@ -59,7 +88,7 @@ const Navbar = () => {
 
                 {/* logo */}
                 <Typography>
-                    <img src={LoL_icon} height='30px' alt='icon'/>
+                    <img src={LoL_icon} height='30px' alt='icon' />
                 </Typography>
 
                 {/* pages */}
@@ -68,11 +97,13 @@ const Navbar = () => {
                     // border: 'solid brown',
                 }}>
                     {menuItemsArr.map((d, k) => {
-                        // console.log(currLoc.hash == href_for_navbar[k]);
+
+                        // console.log(`#${activeLink}`, href_for_navbar[k]);
+
                         return (
-                            <Link key={k} href={`${href_for_navbar[k] === '' ? '#' : href_for_navbar[k]}`} style={{ textDecoration: 'none' }} >
+                            <Link key={k} href={`${href_for_navbar[k] === '#home' ? '#' : href_for_navbar[k]}`} style={{ textDecoration: 'none' }} >
                                 <StyledTypography sx={{
-                                    color: currLoc.hash === `${href_for_navbar[k]}` ? '#19ebe0' : '#fff',
+                                    color: `#${activeLink}` === `${href_for_navbar[k]}` ? '#19ebe0' : '#fff',
                                 }}>
                                     {d}
                                 </StyledTypography>

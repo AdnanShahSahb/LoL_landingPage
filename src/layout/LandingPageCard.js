@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 
 const LandingPageCard = (props) => {
     return (
-        <Box sx={{
+        <Box id='mainSection' sx={{
             height: props.nth === 0 ? 'calc(100vh - 50px)' : 'auto',   // if props.heighting=0, then (is hero page and 100vh); else auto
             backgroundColor: '#000',
             display: 'grid',

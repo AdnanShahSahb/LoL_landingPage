@@ -3,9 +3,9 @@ import AboutUsCard from "../content/AboutUs";
 import styled from "@emotion/styled";
 
 
-const AboutUsPage = ({ p1, p2,id }) => {
+const AboutUsPage = ({ p1, p2, id }) => {
 
-    const aboutUsContent="We are a trusted provider of League of Legends accounts, offering hand-leveled accounts with a lifetime guarantee against recalls or bans. Our instant delivery system and secure payment options make purchasing an account from us a hassle-free experience. With our dedicated customer support team available 24/7, we are committed to providing the best service to our customers."
+    const aboutUsContent = "We are a trusted provider of League of Legends accounts, offering hand-leveled accounts with a lifetime guarantee against recalls or bans. Our instant delivery system and secure payment options make purchasing an account from us a hassle-free experience. With our dedicated customer support team available 24/7, we are committed to providing the best service to our customers."
 
     const userContent = [
         {
@@ -29,22 +29,18 @@ const AboutUsPage = ({ p1, p2,id }) => {
         },
     ]
 
-    
+    // window.location.href='#aboutUs'
+
+
     const AboutBox = styled(Box)({
         // border: 'solid',
-        width:'100vw',
-        marginTop:'40px'
-        // zIndex:'10',
-        // background: 'rgba(10, 10, 10, 0.5)',
-        // opacity:'0.1'
+        width: '100vw',
+        marginTop: '40px',
 
     })
     return (
 
         <AboutBox id={id}>
-            {/* <TypographyHeading>
-                <span style={{ color: '#19ebe0', }}>{p1} </span>{p2}
-            </TypographyHeading> */}
 
             <AboutUsCard aboutContent={aboutUsContent} userContent={userContent} />
 

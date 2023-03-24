@@ -60,6 +60,7 @@ const Sidebar = (props) => {
                         <Link key={k} sx={{
                             padding: '10px',
                             color: currLoc.hash === `${href_for_sidebar[k]}` ? '#19ebe0' : '#fff',
+                            
 
                         }} href={`${href_for_sidebar[k] === '' ? '#' : href_for_sidebar[k]}`} onClick={() => {
                             props.setSidebarO(false);

@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material"
+import { Box } from "@mui/material"
 import SubscribeNowText from "../content/SubscribeNow"
 import { TypographyHeading } from "../App"
 import styled from "@emotion/styled"
@@ -14,7 +14,7 @@ const SubscribeNowPage = ({ p1, p2,id }) => {
     const subscribeNowContent="Don't miss out on exclusive offers and promotions! Subscribe now to stay up-to-date on the latest deals and discounts."
 
     return (
-        <SubscribeBox id={id}>
+        <SubscribeBox id={id} >
             <TypographyHeading>
                 <span style={{ color: '#19ebe0', }}>{p1} </span>{p2}
             </TypographyHeading>

@@ -155,7 +155,7 @@ const AboutUs = (props) => {
                         // console.log(d, k);
                         return (
                             < TypographyLay key={k}>
-                                <Typography sx={{ textAlign: { xs: 'center', md: 'left' }, color: 'rgb(25, 235, 224)' }} component="div" variant="h5">
+                                <Typography sx={{ textAlign: { xs: 'center', md: 'left' }, color: 'rgb(25, 235, 224)',}} component="div" variant="h5">
                                     {d.heading}
                                 </Typography>
                                 {d.para}
